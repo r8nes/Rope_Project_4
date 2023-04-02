@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -53,16 +52,11 @@ public class GameManager : MonoBehaviour
 			PlayerPrefs.SetInt("HighScore", 0);
 		}
 
-		if (PlayerPrefs.GetInt("HighScore") <= 0)
-		{
-			_scoreObject.SetActive(false);
-		}
-
 		_mainCamera = Camera.main;
+		_scoreMenu.text = "MENU";
 
-		_highScoreMenu.text = PlayerPrefs.GetInt("highScore").ToString();
-		_scoreMenu.text = PlayerPrefs.GetInt("score").ToString();
-		_scoreText.text = "0";
+		_highScoreMenu.text = $"Hight Score: {PlayerPrefs.GetInt("HighScore")}";
+		_scoreText.text = $"Score: {PlayerPrefs.GetInt("Score")}";
 	}
 
 	private IEnumerator SpawnMonsters()
@@ -153,7 +147,9 @@ public class GameManager : MonoBehaviour
 	{
 		Time.timeScale = 1f;
 		_isRunning = true;
+		_player.GetComponent<PlayerMovement>().enabled = true;
 		StartCoroutine(SpawnMonsters());
+		_scoreObject.SetActive(false);
 	}
 
 	public void QuitApp()

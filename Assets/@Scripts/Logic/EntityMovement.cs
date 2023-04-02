@@ -8,6 +8,7 @@ public class EntityMovement : MonoBehaviour
 
 	private float _speed;
 	private Transform _target;
+	public SpriteRenderer _sprite;
 
 	private void Start()
 	{
@@ -23,7 +24,8 @@ public class EntityMovement : MonoBehaviour
 			transform.up = _target.transform.position - transform.position;
 		}
 		transform.Translate(Vector3.up * Time.deltaTime * _speed);
-		
+		_sprite.transform.rotation = Quaternion.identity;
+
 		// TODO
 		if (transform.position.x < -100f || transform.position.x > 100f || transform.position.y < -100f || transform.position.y > 100f)
 		{
