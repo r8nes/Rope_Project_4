@@ -1,10 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-	[SerializeField] private float _forceSawToPlayer = 200f;
+	[SerializeField] private float _forceSawToPlayer = 300f;
 
 	[SerializeField] private Transform _sawTransform;
 	[SerializeField] private GameObject _particleForceSaw;
