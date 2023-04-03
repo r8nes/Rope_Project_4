@@ -147,7 +147,7 @@ MonoBehaviour:
   life: 1
   canEject: 1
   forceEject: 1000
-  particuleDeath: {fileID: 100000, guid: 4f2b448ece6bb4940be1ce4a87b8e110, type: 3}
+  particuleDeath: {fileID: 2959954784730506126, guid: be3ad67289144aa4c92951833888e817, type: 3}
 --- !u!58 &4665775567195383909
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -1,12 +1,18 @@
 ﻿using System;
 using UnityEngine;
 
-[Serializable]
-[CreateAssetMenu(fileName = "Wave", menuName = "Entity")]
-public class Wave : ScriptableObject
+namespace RopeMaster.Config
 {
-	public float MinRandom = 0.5f;
-	public float MaxRandom = 3f;
+    [Serializable]
+    [CreateAssetMenu(fileName = "Wave", menuName = "Config/Wave")]
+    public class Wave : ScriptableObject
+    {
+        public float MinRandom = 0.5f;
+        public float MaxRandom = 3f;
+        public float TimeChangeWaves = 20f;
 
-	public GameObject[] Entities;
+        public int EnemiesPerWave = 10;
+        
+        public GameObject[] Entities;
+    }
 }

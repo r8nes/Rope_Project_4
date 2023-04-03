@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MinRandom: 0.5
   MaxRandom: 3
+  TimeChangeWaves: 5
+  EnemiesPerWave: 10
   Entities:
   - {fileID: 4665775567195383904, guid: f5cf5294c903b444d887ef1be18b2a66, type: 3}
